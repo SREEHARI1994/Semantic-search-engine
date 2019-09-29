@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--<link rel="stylesheet" type="text/css" href="result.css">-->
+		<!--<link ... href="{{ url_for('static', filename='result.css') }}" />-->
+		<link rel="stylesheet" type="text/css" href="static/result1.css" />
+		<link rel="shortcut icon" type="image/png" href="favicon.ico"/>
+		<title>Wayfarer</title>
+	</head>
+	<body>
+
+		<div class="div1">
+			<img src="static/sree5.jpg" id="mainimg"/>
+			<form name="wayfarer" action="http://localhost:5000/result" method="POST">
+				<input type="search" class="search" name="sname" value="{{search}}"><br>
+				<input type="submit" class="button" name="submit" value="Search">
+
+			</form>
+		</div>
+		<div class="div2">
+			{% for user in users %}
+			    <p style="color:blue;">{{(user["title"])}}</p>
+			    <p style="color:green;"><a href="{{ user['url'] }}" target="_blank" style="color:green">{{ (user["url"]) }}</a></p>
+			    <p style="color:#767372;">{{(user["text"])}} </p><br/>
+
+
+			{% endfor %}
+		</div>
+		<footer>
+			<a class="leftlinks" href="https://www.google.com/intl/en/ads/?fg=1">Advertising</a>
+			<a class="leftlinks" href="https://www.google.com/services/?fg=1">Business</a>
+			<a class="leftlinks" href="https://www.google.com/intl/en/about/">About</a>
+			<a class="rightlinks" href="https://www.google.com/preferences?hl=en">Settings</a>
+			<a class="rightlinks" href="https://www.google.com/intl/en/policies/?fg=1">Privacy & Terms</a>
+		</footer>
+	</body>
+</html>
+

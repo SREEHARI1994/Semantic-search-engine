@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--<link rel="stylesheet" type="text/css" href="search1.css">-->
+		<!--<link  href="{{ url_for('static', filename='search1.css') }}" />-->
+		<link rel="stylesheet" type="text/css" href="static/search1.css" />
+		<link rel="shortcut icon" type="image/png" href="favicon.ico"/>
+		<title>Wayfarer</title>
+	</head>
+	<body>
+
+		<div>
+			<img src="static/sree5.jpg" id="mainimg"/>
+			<form name="wayfarer" action="http://localhost:5000/result" method="POST">
+				<input type="search" class="search" name="sname"><br>
+				<input type="submit" class="button" name="submit" value="Search">
+
+			</form>
+		</div>
+		<footer>
+			<a class="leftlinks" href="https://www.google.com/intl/en/ads/?fg=1">Advertising</a>
+			<a class="leftlinks" href="https://www.google.com/services/?fg=1">Business</a>
+			<a class="leftlinks" href="https://www.google.com/intl/en/about/">About</a>
+			<a class="rightlinks" href="https://www.google.com/preferences?hl=en">Settings</a>
+			<a class="rightlinks" href="https://www.google.com/intl/en/policies/?fg=1">Privacy & Terms</a>
+		</footer>
+	</body>
+</html>
+
+
